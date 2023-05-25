@@ -24,6 +24,7 @@ export const useSongStore = defineStore('song', {
 
       this.audio = new Audio()
       this.audio.src = track.path
+      
       setTimeout(() => {
         this.isPlaying = true
         this.audio.play()

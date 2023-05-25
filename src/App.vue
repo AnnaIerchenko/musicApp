@@ -5,6 +5,7 @@ import Magnify from 'vue-material-design-icons/Magnify.vue'
 import Bell from 'vue-material-design-icons/Bell.vue'
 import SideMenuItem from './components/SideMenuItem.vue'
 import MusicPlayer from './components/MusicPlayer.vue'
+import SongLyrics from './components/SongLyrics.vue'
 
 import { useSongStore } from './stores/song'
 import { storeToRefs } from 'pinia'
@@ -95,6 +96,11 @@ onBeforeMount(() => {
   </div>
 
   <MusicPlayer v-if="currentTrack"/>
+
+  <SongLyrics 
+    v-if="isLyrics"
+    :class="{'animate__anumated animate__slideInUp animate__faster' : isLyrics}"
+  />
 </template>
  
 <style scoped>

@@ -126,4 +126,5 @@ const playFunc = () => {
       <SongRow v-if="track" :track="track"/>
     </ul>
   </div>
+  <div class="mb-40"></div>
 </template>
