@@ -99,7 +99,7 @@ onBeforeMount(() => {
 
   <SongLyrics 
     v-if="isLyrics"
-    :class="{'animate__anumated animate__slideInUp animate__faster' : isLyrics}"
+    :class="{'animate__animated animate__slideInUp animate__faster' : isLyrics}"
   />
 </template>
  

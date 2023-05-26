@@ -11,8 +11,8 @@
   <RouterLink to="/artist" class="cursor-pointer">
       <div 
         class="relative"
-        @mouseenter="$event => isHover = true"
-        @mouseleave="$event => isHover = false"
+        @mouseenter="isHover = true"
+        @mouseleave="isHover = false"
       >
         <div
           :class="isHover ? 'transition ease-in duration-150 bg-opacity-30' : 'transition ease-out duration-150 bg-opacity-5'"

@@ -11,8 +11,16 @@ const router = createRouter({
       component: HomeView
     },
     {
+      path: '/podcasts',
+      component: HomeView
+    },
+    {
       path: '/artist',
       component: ArtistView
+    },
+    {
+      path: '/favourite',
+      component: HomeView
     },
 
   ]

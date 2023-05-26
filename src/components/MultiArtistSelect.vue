@@ -5,7 +5,7 @@ import Play from 'vue-material-design-icons/Play.vue'
 
 let isHover = ref(false)
 const props = defineProps({ category: String, images: Object, text: String, to: String})
-const {category, images, text, id} = toRefs(props)
+const {category, images, text, to} = toRefs(props)
 
 </script>
 
@@ -13,8 +13,8 @@ const {category, images, text, id} = toRefs(props)
   <div>
     <RouterLink :to="to" class="relative">
       <div 
-        @mouseenter="$event => isHover = true"
-        @mouseleave="$event => isHover = false"
+        @mouseenter="isHover = true"
+        @mouseleave="isHover = false"
         class="flex justify-center intems-center contrast-[2] brightness-[0.87] rounded-md aspect-square overflow-hidden"
       >
       <!-- overlay -->

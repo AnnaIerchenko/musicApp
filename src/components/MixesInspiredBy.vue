@@ -16,8 +16,8 @@ const {by, image, text, to} = toRefs(props)
       <div class="flex items-center bg-[#23232d] rounded-sm h-[54px] relative">
         <div 
           class="flex items-center w-[54px]"
-          @mouseenter="$event => isHover = true"
-          @mouseleave="$event => isHover = false"
+          @mouseenter="isHover = true"
+          @mouseleave="isHover = false"
           >
           <div
             :class="isHover ? 'transition ease-in duration-100 bg-opacity-40' : 'transition ease-out duration-100 bg-opacity-5'"

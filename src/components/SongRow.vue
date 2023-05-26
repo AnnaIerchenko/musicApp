@@ -93,14 +93,14 @@ const openLyrics = (track, artist) => {
         :class="track && currentTrack && currentTrack.name === track.name ? 'text-[#ef5464]' : 'text-[#d4d4d4]'"
         class="text-sm pl-4 hover:underline cursor-pointer"
       >
-        {{ track.id }}, {{ track.name }}
+        {{ track.id }}. {{ track.name }}
       </div>
     </div>
 
     <div class="flex items-center">
       <div
         v-if="track.lyrics"
-        :class="openLyrics(track, artist)"
+        :click="openLyrics(track, artist)"
         class="rotate-45 rounded-full p-1.5 mr-3 hover:bg-[#979797] hover:bg-opacity-20 cursor-pointer"
       >
       <MicrophoneVariant fillColor="#cccccc" :size="21"/>
@@ -118,6 +118,7 @@ const openLyrics = (track, artist) => {
       <div
         v-if="isTrackTime"
         :class="track && currentTrack && currentTrack.name === track.name ? 'text-[#ef5464]' : 'text-[#d4d4d4]'"
+        class="text-[13px] pl-10 font-[200] text-[#d4d4d4]"
       >
         {{ isTrackTime }}
       </div>
